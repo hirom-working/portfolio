@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Automation Bot - Hiromtoon's Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .project-detail {
+            padding: 4rem 0;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .back-link {
+            color: var(--accent-primary);
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        .back-link:hover {
+            color: var(--accent-secondary);
+        }
+        .project-header {
+            margin-bottom: 3rem;
+        }
+        .project-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .project-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .meta-item {
+            color: var(--text-secondary);
+        }
+        .meta-label {
+            font-weight: bold;
+            color: var(--accent-primary);
+        }
+        .section {
+            margin-bottom: 3rem;
+        }
+        .section h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+        .section h3 {
+            font-size: 1.3rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--accent-primary);
+        }
+        .section p, .section li {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .section ul {
+            margin-left: 1.5rem;
+        }
+        .code-block {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+        .code-block code {
+            font-family: 'Courier New', monospace;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .stat-box {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--accent-primary);
+            display: block;
+        }
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .feature-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+        }
+        .feature-card h3 {
+            color: var(--accent-primary);
+            margin-bottom: 0.75rem;
+        }
+        .highlight-box {
+            background-color: var(--bg-card);
+            border-left: 4px solid var(--accent-primary);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">Hiromtoon</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Project Detail -->
+    <main class="project-detail container">
+        <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+
+        <div class="project-header">
+            <h1>🐦 AI-Powered Twitter Bot</h1>
+            <p class="hero-subtitle">ローカルLLM（Ollama）を活用したインテリジェントなTwitter自動化システム</p>
+
+            <div class="project-meta">
+                <div class="meta-item">
+                    <span class="meta-label">期間:</span> 2025年8月〜現在
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">役割:</span> バックエンドエンジニア
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">環境:</span> Kubernetes CronJob
+                </div>
+            </div>
+
+            <div class="tech-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Tweepy</span>
+                <span class="tag">Ollama</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Kubernetes</span>
+                <span class="tag">CronJob</span>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats">
+            <div class="stat-box">
+                <span class="stat-value">24/7</span>
+                <span class="stat-label">自動運用</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-value">2</span>
+                <span class="stat-label">主要機能</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-value">27B</span>
+                <span class="stat-label">LLMパラメータ</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-value">100%</span>
+                <span class="stat-label">ローカルLLM</span>
+            </div>
+        </div>
+
+        <!-- Overview -->
+        <section class="section">
+            <h2>📋 プロジェクト概要</h2>
+            <p>
+                KubernetesクラスターとローカルLLM（Ollama gemma2:27b）を組み合わせた、完全自動化されたTwitterボットシステム。クラウドAI APIに依存せず、自宅GPU上で動作するLLMを活用することで、コスト削減とプライバシー保護を実現しています。
+            </p>
+            <div class="highlight-box">
+                <p><strong>設計思想:</strong> 外部APIに依存しない、完全にセルフホスティングされたインテリジェントなソーシャルメディア自動化システム</p>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="section">
+            <h2>✨ 主要機能</h2>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>🔁 インテリジェント・リツイート</h3>
+                    <p>フォローアカウントからランダムに1アカウントを選択し、最も人気のあるツイートをLLM生成コメント付きでリツイート</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>❤️ 自動いいね機能</h3>
+                    <p>フォローしている全アカウントの最新ツイートに毎日自動でいいねを付与（履歴管理で重複回避）</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Architecture -->
+        <section class="section">
+            <h2>🏗️ 技術アーキテクチャ</h2>
+
+            <h3>システム構成</h3>
+            <div class="code-block">
+                <code>
+┌─────────────────────────────────────────────────┐<br>
+│ Kubernetes Cluster                              │<br>
+│  ┌───────────────────────────────────────────┐  │<br>
+│  │ CronJob: Retweet Bot (毎時0分実行)       │  │<br>
+│  │  - Python + Tweepy (Twitter API v2)      │  │<br>
+│  │  - Ollama API Client                     │  │<br>
+│  │  - NFS Persistent Storage (履歴管理)     │  │<br>
+│  └───────────────────────────────────────────┘  │<br>
+│  ┌───────────────────────────────────────────┐  │<br>
+│  │ CronJob: Like Bot (毎日0時実行)          │  │<br>
+│  │  - Python + Tweepy                       │  │<br>
+│  │  - いいね履歴JSON管理                     │  │<br>
+│  └───────────────────────────────────────────┘  │<br>
+└─────────────────────────────────────────────────┘<br>
+                      ↓<br>
+┌─────────────────────────────────────────────────┐<br>
+│ Eucalyptus GPU Server                           │<br>
+│  ┌───────────────────────────────────────────┐  │<br>
+│  │ Ollama (gemma2:27b)                      │  │<br>
+│  │  - Port: 11434                           │  │<br>
+│  │  - GPU加速推論                            │  │<br>
+│  └───────────────────────────────────────────┘  │<br>
+└─────────────────────────────────────────────────┘
+                </code>
+            </div>
+
+            <h3>コンテナ化とデプロイ</h3>
+            <p>
+                マルチステージDockerビルドにより、軽量なコンテナイメージを作成。Harborプライベートレジストリに保存し、Kubernetes CronJobで定期実行しています。
+            </p>
+            <div class="code-block">
+                <code>
+FROM python:3.11-slim<br>
+WORKDIR /app<br>
+<br>
+# UV (高速Pythonパッケージマネージャー) 使用<br>
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /usr/local/bin/uv<br>
+RUN uv venv /opt/venv<br>
+ENV PATH="/opt/venv/bin:$PATH"<br>
+<br>
+# 依存関係インストール<br>
+RUN uv pip install --no-cache tweepy anthropic<br>
+<br>
+# アプリケーションコピー<br>
+COPY bot.py like_bot.py /app/<br>
+RUN chmod +x /app/*.py<br>
+<br>
+CMD ["python", "/app/bot.py"]
+                </code>
+            </div>
+        </section>
+
+        <!-- Implementation Details -->
+        <section class="section">
+            <h2>⚙️ 実装の詳細</h2>
+
+            <h3>1. LLMによるコメント生成</h3>
+            <p>
+                当初はAnthropic Claude APIを使用していましたが、コスト削減とレスポンス速度向上のため、ローカルOllama（gemma2:27b）に切り替えました。
+            </p>
+            <div class="code-block">
+                <code>
+def generate_comment(tweet_text, is_hiromtoon):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"""Ollamaでコメント生成"""<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tweet_type = "自分の過去のツイート" if is_hiromtoon else "フォローしている人のツイート"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;prompt = f"""以下は{tweet_type}です。短いコメント（140字以内）を生成してください。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ツイート内容: {tweet_text}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;コメント:"""<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;response = requests.post(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"http://192.168.150.105:11434/api/generate",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;json={"model": "gemma2:27b", "prompt": prompt, "stream": False},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timeout=30<br>
+&nbsp;&nbsp;&nbsp;&nbsp;)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return response.json()['response'].strip()
+                </code>
+            </div>
+
+            <h3>2. ランダム選択アルゴリズム</h3>
+            <p>
+                毎回異なるアカウントからリツイートするため、履歴管理とランダム選択を組み合わせた仕組みを実装。同じアカウントの連続選択を回避します。
+            </p>
+            <div class="code-block">
+                <code>
+def select_account_to_retweet(accounts, retweet_history):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"""未リツイートアカウントからランダム選択"""<br>
+&nbsp;&nbsp;&nbsp;&nbsp;available = [acc for acc in accounts if acc['username'] not in retweet_history]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if not available:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 全員リツイート済み → 履歴リセット<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;retweet_history.clear()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;available = accounts<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return random.choice(available)
+                </code>
+            </div>
+
+            <h3>3. いいね重複防止</h3>
+            <p>
+                既にいいねしたツイートIDをJSON形式で永続化し、重複いいねを完全に防止。NFSストレージで履歴を保存します。
+            </p>
+            <div class="code-block">
+                <code>
+# いいね履歴読み込み<br>
+history = load_json(LIKE_HISTORY_FILE, {'liked_tweets': []})<br>
+liked_tweets = set(history.get('liked_tweets', []))<br>
+<br>
+for account in accounts:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tweet = get_latest_tweet(client, account['user_id'])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if tweet.id in liked_tweets:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue  # スキップ<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;client.like(tweet.id)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;liked_tweets.add(tweet.id)<br>
+<br>
+# 履歴保存<br>
+history['liked_tweets'] = list(liked_tweets)<br>
+save_json(LIKE_HISTORY_FILE, history)
+                </code>
+            </div>
+        </section>
+
+        <!-- Kubernetes Integration -->
+        <section class="section">
+            <h2>☸️ Kubernetesとの統合</h2>
+
+            <h3>CronJob設定（リツイートボット）</h3>
+            <div class="code-block">
+                <code>
+apiVersion: batch/v1<br>
+kind: CronJob<br>
+metadata:<br>
+&nbsp;&nbsp;name: twitter-bot-retweet<br>
+&nbsp;&nbsp;namespace: twitter-bot<br>
+spec:<br>
+&nbsp;&nbsp;schedule: "0 * * * *"  # 毎時0分実行<br>
+&nbsp;&nbsp;jobTemplate:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;spec:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;template:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;spec:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;containers:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- name: bot<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;image: 192.168.150.161/library/twitter-bot:latest<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;env:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- name: TWITTER_API_KEY<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;valueFrom:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;secretKeyRef:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: twitter-bot-secrets<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key: TWITTER_API_KEY<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;volumeMounts:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- name: data<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mountPath: /data<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;volumes:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- name: data<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;persistentVolumeClaim:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;claimName: twitter-bot-pvc
+                </code>
+            </div>
+
+            <h3>シークレット管理</h3>
+            <p>
+                Twitter API認証情報はKubernetesシークレットで管理。環境変数として安全にコンテナに注入されます。
+            </p>
+        </section>
+
+        <!-- Results -->
+        <section class="section">
+            <h2>📊 成果</h2>
+            <ul>
+                <li><strong>完全自動化:</strong> 設定後、手動介入不要で24時間365日稼働</li>
+                <li><strong>コスト削減:</strong> クラウドLLM API（Claude）からローカルOllama に切り替え、月額コスト$0</li>
+                <li><strong>レスポンス速度:</strong> API往復時間削減により、コメント生成速度が3倍向上</li>
+                <li><strong>プライバシー保護:</strong> すべての処理が自宅環境で完結、外部サービスにデータ送信なし</li>
+                <li><strong>エラー回復:</strong> CronJob による自動リトライで、一時的な障害も自動復旧</li>
+            </ul>
+        </section>
+
+        <!-- Technical Challenges -->
+        <section class="section">
+            <h2>🎯 技術的チャレンジ</h2>
+
+            <h3>1. Twitter API制限への対応</h3>
+            <p>
+                月間API呼び出し制限に達した際、適切なエラーハンドリングとフォールバックコメント（"_〆(・_・。)"）を実装。制限解除後の自動復帰も実現しました。
+            </p>
+
+            <h3>2. Kubernetesシークレット管理</h3>
+            <p>
+                Secret名の命名規則ミス（twitter-bot-secret vs twitter-bot-secrets）により初期デプロイが失敗。環境変数キー名も大文字/小文字の統一が必要でした。
+            </p>
+
+            <h3>3. LLMレスポンス時間の最適化</h3>
+            <p>
+                Ollama APIの`stream: false`モードを使用し、レスポンス完了まで待機。タイムアウト30秒設定により、長時間応答待ちを防止しています。
+            </p>
+        </section>
+
+        <!-- Future Work -->
+        <section class="section">
+            <h2>🚀 今後の展開</h2>
+            <ul>
+                <li><strong>Hiromtoon LLM統合:</strong> 学習完了後、gemma2:27b → hiromtoon-llm に切り替え</li>
+                <li><strong>感情分析機能:</strong> いいね対象ツイートをポジティブ/ネガティブで分類</li>
+                <li><strong>スケジューリング最適化:</strong> エンゲージメント率の高い時間帯に自動調整</li>
+                <li><strong>メトリクス収集:</strong> Prometheus でリツイート数/いいね数を監視</li>
+                <li><strong>マルチアカウント対応:</strong> 複数のTwitterアカウントを管理</li>
+            </ul>
+        </section>
+
+        <!-- Links -->
+        <section class="section">
+            <h2>🔗 関連リンク</h2>
+            <div class="hero-buttons">
+                <a href="https://github.com/hiromtoon/twitter-bot" class="btn btn-primary" target="_blank">
+                    GitHub Repository
+                </a>
+            </div>
+        </section>
+
+        <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Hiromtoon. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

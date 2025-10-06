@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiromtoon's Portfolio - Infrastructure & AI Engineer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <nav class="container">
+            <div class="logo">Hiromtoon</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#tech-stack">Tech Stack</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ヒーローセクション -->
+    <section class="hero">
+        <div class="container">
+            <h1>Infrastructure & AI Engineer</h1>
+            <p class="hero-subtitle">オンプレミスKubernetesとローカルLLMで構築する、次世代パーソナルインフラ</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="https://github.com/hiromtoon" class="btn btn-secondary" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>システムエンジニアとして、オンプレミスKubernetesクラスターの構築・運用から、LLMのファインチューニングまで幅広く取り組んでいます。特に、エンタープライズレベルのインフラ技術を個人環境で実装し、実用的なアプリケーションとして日常利用することで、継続的にスキルを磨いています。</p>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <!-- Project 1: Homelab Infrastructure -->
+                <div class="project-card">
+                    <div class="project-icon">🏗️</div>
+                    <h3>Homelab Kubernetes Infrastructure</h3>
+                    <p>3ノードHAクラスター、GitOps、プライベートレジストリを備えた本格的なオンプレミスインフラ環境</p>
+                    <div class="tech-tags">
+                        <span class="tag">Kubernetes</span>
+                        <span class="tag">ArgoCD</span>
+                        <span class="tag">Harbor</span>
+                        <span class="tag">Ansible</span>
+                    </div>
+                    <a href="projects/homelab-infrastructure.html" class="project-link">詳細を見る →</a>
+                </div>
+
+                <!-- Project 2: Hiromtoon LLM -->
+                <div class="project-card">
+                    <div class="project-icon">🤖</div>
+                    <h3>Hiromtoon LLM</h3>
+                    <p>自分のTwitterデータ19,000件から学習した、パーソナライズド大規模言語モデル</p>
+                    <div class="tech-tags">
+                        <span class="tag">QLoRA</span>
+                        <span class="tag">Gemma3-27B</span>
+                        <span class="tag">CUDA</span>
+                        <span class="tag">PyTorch</span>
+                    </div>
+                    <a href="projects/hiromtoon-llm.html" class="project-link">詳細を見る →</a>
+                </div>
+
+                <!-- Project 3: Twitter Automation -->
+                <div class="project-card">
+                    <div class="project-icon">🐦</div>
+                    <h3>AI-Powered Twitter Bot</h3>
+                    <p>Ollama（ローカルLLM）を活用した、インテリジェントなTwitter自動化システム</p>
+                    <div class="tech-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Tweepy</span>
+                        <span class="tag">Ollama</span>
+                        <span class="tag">CronJob</span>
+                    </div>
+                    <a href="projects/twitter-automation.html" class="project-link">詳細を見る →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section id="tech-stack" class="tech-stack">
+        <div class="container">
+            <h2>Tech Stack</h2>
+            <div class="stack-grid">
+                <div class="stack-category">
+                    <h3>Infrastructure</h3>
+                    <ul>
+                        <li>Kubernetes (MicroK8s)</li>
+                        <li>Docker</li>
+                        <li>Ansible</li>
+                        <li>Harbor Registry</li>
+                        <li>ArgoCD (GitOps)</li>
+                        <li>Prometheus & Grafana</li>
+                    </ul>
+                </div>
+                <div class="stack-category">
+                    <h3>AI & Machine Learning</h3>
+                    <ul>
+                        <li>PyTorch</li>
+                        <li>HuggingFace Transformers</li>
+                        <li>QLoRA / PEFT</li>
+                        <li>Ollama</li>
+                        <li>CUDA & GPU Operator</li>
+                        <li>OpenWebUI</li>
+                    </ul>
+                </div>
+                <div class="stack-category">
+                    <h3>Development</h3>
+                    <ul>
+                        <li>Python (FastAPI, Tweepy)</li>
+                        <li>Git & GitHub</li>
+                        <li>Linux (Ubuntu)</li>
+                        <li>Bash Scripting</li>
+                        <li>UV (Python Manager)</li>
+                        <li>JupyterLab</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>プロジェクトや技術について、お気軽にご連絡ください。</p>
+            <div class="contact-links">
+                <a href="https://github.com/hiromtoon" target="_blank" class="contact-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    GitHub
+                </a>
+                <a href="https://twitter.com/hiromtoon" target="_blank" class="contact-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                    Twitter
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Hiromtoon. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

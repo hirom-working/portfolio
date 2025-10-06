@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiromtoon LLM - Hiromtoon's Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .project-detail {
+            padding: 4rem 0;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .back-link {
+            color: var(--accent-primary);
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        .back-link:hover {
+            color: var(--accent-secondary);
+        }
+        .project-header {
+            margin-bottom: 3rem;
+        }
+        .project-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .project-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .meta-item {
+            color: var(--text-secondary);
+        }
+        .meta-label {
+            font-weight: bold;
+            color: var(--accent-primary);
+        }
+        .section {
+            margin-bottom: 3rem;
+        }
+        .section h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+        .section h3 {
+            font-size: 1.3rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--accent-primary);
+        }
+        .section p, .section li {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .section ul {
+            margin-left: 1.5rem;
+        }
+        .code-block {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+        .code-block code {
+            font-family: 'Courier New', monospace;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .stat-box {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--accent-secondary);
+            display: block;
+        }
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+        }
+        .highlight-box {
+            background-color: var(--bg-card);
+            border-left: 4px solid var(--accent-secondary);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        .pipeline {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        .pipeline-step {
+            display: flex;
+            align-items: center;
+            margin: 1rem 0;
+            padding: 1rem;
+            background-color: var(--bg-secondary);
+            border-radius: 0.5rem;
+        }
+        .step-number {
+            background: var(--accent-gradient);
+            color: white;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        .step-content h4 {
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+        .step-content p {
+            color: var(--text-secondary);
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">Hiromtoon</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Project Detail -->
+    <main class="project-detail container">
+        <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+
+        <div class="project-header">
+            <h1>🤖 Hiromtoon LLM</h1>
+            <p class="hero-subtitle">自分のTwitterデータから学習した、パーソナライズド大規模言語モデル</p>
+
+            <div class="project-meta">
+                <div class="meta-item">
+                    <span class="meta-label">期間:</span> 2025年9月〜現在
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">役割:</span> MLエンジニア
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">手法:</span> QLoRA Fine-tuning
+                </div>
+            </div>
+
+            <div class="tech-tags">
+                <span class="tag">PyTorch</span>
+                <span class="tag">QLoRA</span>
+                <span class="tag">Gemma3-27B</span>
+                <span class="tag">HuggingFace</span>
+                <span class="tag">PEFT</span>
+                <span class="tag">CUDA</span>
+                <span class="tag">bitsandbytes</span>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats">
+            <div class="stat-box">
+                <span class="stat-value">19,320</span>
+                <span class="stat-label">学習元ツイート数</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-value">27B</span>
+                <span class="stat-label">パラメータ数</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-value">32GB</span>
+                <span class="stat-label">GPU VRAM</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-value">~2日</span>
+                <span class="stat-label">学習時間</span>
+            </div>
+        </div>
+
+        <!-- Overview -->
+        <section class="section">
+            <h2>📋 プロジェクト概要</h2>
+            <p>
+                自分自身のTwitterアーカイブデータ19,320件を使用して、Google の Gemma3-27B モデルをQLoRA（Quantized Low-Rank Adaptation）でファインチューニング。自分の文体、思考パターン、興味関心を再現する、パーソナライズド大規模言語モデルを構築しました。
+            </p>
+            <div class="highlight-box">
+                <p><strong>プロジェクトの目的:</strong> 個人の知識・思考・文体を学習したAIアシスタントを作成し、将来的にOpenWebUIを通じて日常的に活用できるようにすること。</p>
+            </div>
+        </section>
+
+        <!-- Why QLoRA -->
+        <section class="section">
+            <h2>🎯 なぜQLoRAを選んだのか</h2>
+            <p>
+                27Bパラメータの大規模モデルを、自宅GPU環境（RTX 5060 Ti × 2、合計32GB VRAM）でファインチューニングするため、QLoRA手法を採用しました。
+            </p>
+
+            <h3>QLoRAの特徴</h3>
+            <ul>
+                <li><strong>4-bit量子化:</strong> モデルサイズを75%削減し、メモリ使用量を大幅に削減</li>
+                <li><strong>LoRAアダプター:</strong> 全パラメータを更新せず、低ランク行列のみを学習（高効率）</li>
+                <li><strong>性能維持:</strong> Full Fine-tuning と同等の精度を、1/4のメモリで実現</li>
+                <li><strong>コスト削減:</strong> クラウドGPU不要、自宅環境で学習可能</li>
+            </ul>
+
+            <div class="highlight-box">
+                <p>
+                    <strong>メモリ最適化の成果:</strong><br>
+                    通常のFull Fine-tuning: ~100GB VRAM 必要<br>
+                    QLoRA Fine-tuning: 18GB VRAM で実現（82%削減）
+                </p>
+            </div>
+        </section>
+
+        <!-- Training Pipeline -->
+        <section class="section">
+            <h2>🔄 学習パイプライン</h2>
+            <div class="pipeline">
+                <div class="pipeline-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>データ収集</h4>
+                        <p>Twitterアーカイブから19,320件のツイートを抽出</p>
+                    </div>
+                </div>
+
+                <div class="pipeline-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>データ前処理</h4>
+                        <p>リプライ、リツイートを除外 → 16,005件のオリジナルツイートに絞り込み</p>
+                    </div>
+                </div>
+
+                <div class="pipeline-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>フォーマット変換</h4>
+                        <p>Gemma3 Instruction format に変換（user/model ターン形式）</p>
+                    </div>
+                </div>
+
+                <div class="pipeline-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>データ分割</h4>
+                        <p>Train: 80% (12,804件) / Validation: 20% (3,201件)</p>
+                    </div>
+                </div>
+
+                <div class="pipeline-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h4>QLoRA学習</h4>
+                        <p>Gemma3-27B を 4-bit量子化 + LoRA アダプターで学習（3 Epoch）</p>
+                    </div>
+                </div>
+
+                <div class="pipeline-step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h4>モデルマージ・デプロイ</h4>
+                        <p>Base model + LoRA adapter を統合し、Ollama 形式に変換</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Implementation -->
+        <section class="section">
+            <h2>⚙️ 技術実装</h2>
+
+            <h3>QLoRA 設定</h3>
+            <div class="code-block">
+                <code>
+from peft import LoraConfig, get_peft_model<br>
+from transformers import BitsAndBytesConfig<br>
+<br>
+# 4-bit量子化設定<br>
+bnb_config = BitsAndBytesConfig(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;load_in_4bit=True,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bnb_4bit_quant_type='nf4',  # Normal Float 4-bit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bnb_4bit_compute_dtype=torch.bfloat16,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bnb_4bit_use_double_quant=True,  # 二重量子化<br>
+)<br>
+<br>
+# LoRA設定<br>
+lora_config = LoraConfig(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;r=16,  # LoRA rank<br>
+&nbsp;&nbsp;&nbsp;&nbsp;lora_alpha=32,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;target_modules=['q_proj', 'v_proj'],  # Attention層のみ<br>
+&nbsp;&nbsp;&nbsp;&nbsp;lora_dropout=0.05,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bias='none',<br>
+)
+                </code>
+            </div>
+
+            <h3>メモリ最適化テクニック</h3>
+            <ul>
+                <li><strong>Gradient Accumulation:</strong> バッチサイズ1 × 累積16ステップ = 実質バッチサイズ16</li>
+                <li><strong>Target Modules削減:</strong> 7モジュール → 2モジュール（q_proj, v_proj）に限定</li>
+                <li><strong>Max Sequence Length最適化:</strong> Twitter文字制限に合わせて384トークンに設定</li>
+                <li><strong>GPU Memory割り当て:</strong> max_memory={'0': '14GB', '1': '14GB'} で明示的に制限</li>
+            </ul>
+
+            <h3>学習パラメータ</h3>
+            <div class="code-block">
+                <code>
+training_args = TrainingArguments(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;output_dir='./hiromtoon-llm',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;num_train_epochs=3,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;per_device_train_batch_size=1,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gradient_accumulation_steps=16,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;learning_rate=2e-4,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;fp16=False,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bf16=True,  # bfloat16 で高速化<br>
+&nbsp;&nbsp;&nbsp;&nbsp;logging_steps=10,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;eval_strategy='steps',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;eval_steps=100,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;save_steps=500,<br>
+)
+                </code>
+            </div>
+        </section>
+
+        <!-- Training Results -->
+        <section class="section">
+            <h2>📊 学習結果</h2>
+
+            <h3>Loss値の推移</h3>
+            <div class="highlight-box">
+                <p>
+                    <strong>初期Loss:</strong> 7.83 (Epoch 0.0)<br>
+                    <strong>1 Epoch完了時:</strong> 1.89 (Epoch 1.0)<br>
+                    <strong>現在（学習中）:</strong> ~1.89 (Epoch 1.1/3.0)
+                </p>
+                <p style="margin-top: 1rem;">
+                    Loss値が7.83 → 1.89 へ大幅に改善（76%削減）。過学習の兆候もなく、順調に学習が進行しています。
+                </p>
+            </div>
+
+            <h3>GPU使用状況</h3>
+            <ul>
+                <li><strong>GPU 0:</strong> 9.0GB / 16GB (56%)</li>
+                <li><strong>GPU 1:</strong> 8.5GB / 16GB (53%)</li>
+                <li><strong>合計:</strong> 17.5GB / 32GB（想定内の使用量）</li>
+            </ul>
+
+            <h3>学習時間</h3>
+            <p>
+                推定完了時間: 約1.5〜2日（3 Epoch完了まで）<br>
+                現在進行中: Epoch 1.1/3.0（順調に進行中）
+            </p>
+        </section>
+
+        <!-- Technical Challenges -->
+        <section class="section">
+            <h2>🎯 技術的チャレンジ</h2>
+
+            <h3>1. メモリ不足エラーとの戦い</h3>
+            <p>
+                初期設定では CUDA Out of Memory エラーが発生。Target Modules、Sequence Length、Batch Sizeを段階的に調整し、最適なバランスを発見しました。
+            </p>
+
+            <h3>2. データ品質の向上</h3>
+            <p>
+                リプライやリツイートを含めると文脈が不完全になるため、オリジナルツイートのみに絞り込み。さらに、Gemma3の instruction format に正確に変換することで、学習効率を向上させました。
+            </p>
+
+            <h3>3. モデル選定</h3>
+            <p>
+                当初 Gemma2-27B を検討していましたが、最新の Gemma3-27B に変更。より高い性能と、HuggingFace へのアクセス許可取得により、最先端モデルでの学習を実現しました。
+            </p>
+        </section>
+
+        <!-- Future Work -->
+        <section class="section">
+            <h2>🚀 今後の展開</h2>
+            <ul>
+                <li><strong>OpenWebUI統合:</strong> Ollama経由で日常的に利用可能に</li>
+                <li><strong>継続学習:</strong> 新しいツイートデータで定期的に追加学習</li>
+                <li><strong>マルチモーダル対応:</strong> 画像付きツイートも学習対象に</li>
+                <li><strong>会話ログ統合:</strong> Twitter以外のテキストデータも学習に追加</li>
+                <li><strong>性能評価:</strong> 人間評価による品質測定とベンチマーク</li>
+            </ul>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="section">
+            <h2>💡 学んだこと</h2>
+            <ul>
+                <li>QLoRAによるメモリ効率的なLLMファインチューニング手法</li>
+                <li>大規模モデルを自宅GPU環境で学習するための最適化テクニック</li>
+                <li>PyTorch、HuggingFace Transformers、PEFT ライブラリの実践的な使用方法</li>
+                <li>CUDA メモリ管理と Multi-GPU 環境でのモデル分散配置</li>
+                <li>データ品質がLLM学習に与える影響の重要性</li>
+            </ul>
+        </section>
+
+        <!-- Links -->
+        <section class="section">
+            <h2>🔗 関連リンク</h2>
+            <div class="hero-buttons">
+                <a href="https://github.com/hiromtoon/hiromtoon-llm" class="btn btn-primary" target="_blank">
+                    GitHub Repository
+                </a>
+            </div>
+        </section>
+
+        <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Hiromtoon. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

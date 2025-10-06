@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homelab Infrastructure - Hiromtoon's Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .project-detail {
+            padding: 4rem 0;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .back-link {
+            color: var(--accent-primary);
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        .back-link:hover {
+            color: var(--accent-secondary);
+        }
+        .project-header {
+            margin-bottom: 3rem;
+        }
+        .project-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .project-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .meta-item {
+            color: var(--text-secondary);
+        }
+        .meta-label {
+            font-weight: bold;
+            color: var(--accent-primary);
+        }
+        .section {
+            margin-bottom: 3rem;
+        }
+        .section h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+        .section p, .section li {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .section ul {
+            margin-left: 1.5rem;
+        }
+        .architecture-diagram {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        .architecture-diagram img {
+            width: 100%;
+            height: auto;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .feature-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+        }
+        .feature-card h3 {
+            color: var(--accent-primary);
+            margin-bottom: 0.75rem;
+        }
+        .code-block {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+        .code-block code {
+            font-family: 'Courier New', monospace;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .stat-box {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--accent-primary);
+            display: block;
+        }
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">Hiromtoon</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Project Detail -->
+    <main class="project-detail container">
+        <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+
+        <div class="project-header">
+            <h1>🏗️ Homelab Kubernetes Infrastructure</h1>
+            <p class="hero-subtitle">エンタープライズレベルの本格的なオンプレミスKubernetesクラスター</p>
+
+            <div class="project-meta">
+                <div class="meta-item">
+                    <span class="meta-label">期間:</span> 2024年〜現在
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">役割:</span> インフラエンジニア
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">環境:</span> オンプレミス
+                </div>
+            </div>
+
+            <div class="tech-tags">
+                <span class="tag">Kubernetes</span>
+                <span class="tag">MicroK8s</span>
+                <span class="tag">ArgoCD</span>
+                <span class="tag">Harbor</span>
+                <span class="tag">Ansible</span>
+                <span class="tag">Prometheus</span>
+                <span class="tag">Grafana</span>
+                <span class="tag">GitOps</span>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats">
+            <div class="stat-box">
+                <span class="stat-value">3</span>
+                <span class="stat-label">ノード数</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-value">72GB</span>
+                <span class="stat-label">総RAM</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-value">24</span>
+                <span class="stat-label">CPU コア</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-value">20+</span>
+                <span class="stat-label">デプロイ済みサービス</span>
+            </div>
+        </div>
+
+        <!-- Overview -->
+        <section class="section">
+            <h2>📋 プロジェクト概要</h2>
+            <p>
+                自宅に物理サーバー3台を使用した高可用性Kubernetesクラスターを構築。GitOpsによる自動デプロイメント、プライベートコンテナレジストリ、包括的な監視システムを備えた、エンタープライズレベルのインフラ環境を実現しました。
+            </p>
+            <p>
+                Infrastructure as Code（IaC）の原則に基づき、Ansibleによる自動化とGitによるバージョン管理により、再現可能で保守性の高いインフラを構築しています。
+            </p>
+        </section>
+
+        <!-- Architecture -->
+        <section class="section">
+            <h2>🏛️ アーキテクチャ</h2>
+            <div class="architecture-diagram">
+                <img src="../images/architecture.svg" alt="Infrastructure Architecture Diagram">
+            </div>
+        </section>
+
+        <!-- Cluster Configuration -->
+        <section class="section">
+            <h2>⚙️ クラスター構成</h2>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>botan (Control Plane)</h3>
+                    <p>マスターノード</p>
+                    <ul>
+                        <li>RAM: 24GB (82%使用)</li>
+                        <li>CPU: 8コア</li>
+                        <li>ArgoCD</li>
+                        <li>Prometheus</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>shakuyaku (Worker)</h3>
+                    <p>ワーカーノード</p>
+                    <ul>
+                        <li>RAM: 24GB (64%使用)</li>
+                        <li>CPU: 8コア</li>
+                        <li>Harbor Registry</li>
+                        <li>OpenWebUI</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>yuri (Worker)</h3>
+                    <p>ワーカーノード</p>
+                    <ul>
+                        <li>RAM: 24GB (68%使用)</li>
+                        <li>CPU: 8コア</li>
+                        <li>JupyterLab</li>
+                        <li>Harbor-trivy</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features -->
+        <section class="section">
+            <h2>✨ 主要機能</h2>
+
+            <h3>1. GitOps による自動デプロイメント (ArgoCD)</h3>
+            <p>
+                GitリポジトリをSingle Source of Truthとして、Kubernetesマニフェストの変更を自動的にクラスターに反映。宣言的な設定管理により、インフラの状態を常にGitと同期させています。
+            </p>
+
+            <h3>2. プライベートコンテナレジストリ (Harbor)</h3>
+            <p>
+                自社ビルドのDockerイメージを安全に管理するため、Harborを運用。脆弱性スキャン（Trivy統合）、イメージ署名、RBAC による詳細なアクセス制御を実装しています。
+            </p>
+            <div class="code-block">
+                <code>
+# Harbor へのイメージプッシュ<br>
+docker build -t 192.168.150.161/library/my-app:latest .<br>
+docker push 192.168.150.161/library/my-app:latest<br>
+<br>
+# Kubernetes での利用<br>
+kubectl create secret docker-registry harbor-secret \<br>
+&nbsp;&nbsp;--docker-server=192.168.150.161 \<br>
+&nbsp;&nbsp;--docker-username=admin
+                </code>
+            </div>
+
+            <h3>3. インフラ自動化 (Ansible)</h3>
+            <p>
+                サーバーのセットアップからKubernetesクラスターの構築まで、すべてAnsibleで自動化。冪等性を担保したプレイブックにより、安全かつ再現可能なインフラ構築を実現しています。
+            </p>
+            <div class="code-block">
+                <code>
+# クラスター全体のセットアップ<br>
+ansible-playbook -i hosts cluster-setup.yml --vault-password-file .vault_pass<br>
+<br>
+# ノード個別のメンテナンス<br>
+ansible-playbook -i hosts maintenances/kubernetes-update.yml
+                </code>
+            </div>
+
+            <h3>4. 包括的な監視 (Prometheus + Grafana)</h3>
+            <p>
+                クラスター全体のメトリクスをPrometheusで収集し、Grafanaで可視化。リソース使用率、Pod状態、ネットワークトラフィックなど、あらゆる指標をリアルタイムで監視しています。
+            </p>
+        </section>
+
+        <!-- Technical Challenges -->
+        <section class="section">
+            <h2>🎯 技術的チャレンジ</h2>
+
+            <h3>リソース最適化</h3>
+            <p>
+                限られた物理リソース（各ノード24GB RAM）の中で、20以上のサービスを安定稼働させるため、Pod配置の最適化を実施。Node Affinity、Pod Anti-Affinity、リソースリクエスト/リミットを駆使し、各ノードの使用率を80%以下に抑制しながら最大限のパフォーマンスを実現しました。
+            </p>
+
+            <h3>高可用性の実現</h3>
+            <p>
+                3ノード構成でHAクラスターを構築し、単一障害点を排除。etcdの分散配置、コントロールプレーンの冗長化により、1ノード障害時でもサービス継続可能な構成を実現しています。
+            </p>
+
+            <h3>セキュリティ強化</h3>
+            <p>
+                Ansible Vaultによる機密情報の暗号化管理、Kubernetesシークレットの適切な運用、Harborによるイメージ脆弱性スキャンなど、多層的なセキュリティ対策を実装しています。
+            </p>
+        </section>
+
+        <!-- Results -->
+        <section class="section">
+            <h2>📊 成果</h2>
+            <ul>
+                <li><strong>稼働率99%以上</strong>を達成し、安定したサービス提供を実現</li>
+                <li><strong>デプロイ時間を90%削減</strong>（手動デプロイ30分 → ArgoCD自動デプロイ3分）</li>
+                <li><strong>20以上のアプリケーション</strong>を単一クラスター上で効率的に運用</li>
+                <li><strong>完全自動化</strong>により、新規サービス追加時の作業時間を大幅削減</li>
+                <li><strong>再現可能なインフラ</strong>により、災害復旧時間を最小化</li>
+            </ul>
+        </section>
+
+        <!-- Links -->
+        <section class="section">
+            <h2>🔗 関連リンク</h2>
+            <div class="hero-buttons">
+                <a href="https://github.com/hiromtoon/homelab" class="btn btn-primary" target="_blank">
+                    GitHub Repository
+                </a>
+            </div>
+        </section>
+
+        <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Hiromtoon. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
